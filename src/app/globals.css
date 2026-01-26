@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles for Weenie in a Beanie */
+@layer base {
+  :root {
+    --color-weenie-red: #C94B4B;
+    --color-weenie-teal: #3B9B9B;
+    --color-weenie-cream: #FFF8F0;
+    --color-weenie-navy: #2A4365;
+    --color-weenie-yellow: #E5B84C;
+    --color-weenie-orange: #D97B4A;
+    --color-weenie-green: #4A9B7F;
+    --color-weenie-brown: #5C4033;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-weenie-cream text-foreground antialiased;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+
+  p, span, a {
+    @apply font-body;
+  }
+}
+
+@layer components {
+  /* Cozy button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-weenie-red text-white font-semibold rounded-soft
+           shadow-cozy transition-all duration-200
+           hover:bg-weenie-red/90 hover:shadow-cozy-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-weenie-red/50 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-weenie-teal text-white font-semibold rounded-soft
+           shadow-cozy transition-all duration-200
+           hover:bg-weenie-teal/90 hover:shadow-cozy-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-weenie-teal/50 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-transparent border-2 border-weenie-red text-weenie-red font-semibold rounded-soft
+           transition-all duration-200
+           hover:bg-weenie-red hover:text-white hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-weenie-red/50 focus:ring-offset-2;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-white rounded-softer shadow-cozy p-6 transition-shadow hover:shadow-cozy-lg;
+  }
+
+  /* Section container */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Form inputs */
+  .input {
+    @apply w-full px-4 py-3 rounded-soft border-2 border-weenie-teal/20
+           bg-white text-foreground placeholder:text-gray-400
+           transition-colors duration-200
+           focus:outline-none focus:border-weenie-teal focus:ring-2 focus:ring-weenie-teal/20;
+  }
+
+  .label {
+    @apply block text-sm font-semibold text-foreground mb-2;
+  }
+
+  /* Snowflake animation for decorative elements */
+  .snowflake {
+    @apply absolute text-white/30 pointer-events-none;
+    animation: snowfall var(--duration, 10s) linear infinite;
+    animation-delay: var(--delay, 0s);
+  }
+}
+
+/* Custom utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, var(--color-weenie-red) 0%, var(--color-weenie-orange) 100%);
+  }
+
+  .gradient-cool {
+    background: linear-gradient(135deg, var(--color-weenie-teal) 0%, var(--color-weenie-navy) 100%);
+  }
+
+  .gradient-winter {
+    background: linear-gradient(180deg, #E8F4FF 0%, var(--color-weenie-cream) 100%);
+  }
+}
