@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/cover.png',
         width: 1200,
         height: 630,
         alt: 'Weenie in a Beanie - A dachshund wearing a colorful beanie in the snow',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${SITE_NAME} - A Cozy Winter Story Kids Love`,
     description: SITE_DESCRIPTION,
-    images: ['/og-image.jpg'],
+    images: ['/images/cover.png'],
   },
   robots: {
     index: true,
