@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { ExternalLink, CheckCircle, Star, BookOpen, ArrowRight } from 'lucide-react'
 import { BOOK, AMAZON_BOOK_URL } from '@/lib/constants'
@@ -54,15 +55,13 @@ export default function BookPage() {
                 />
                 {/* Book cover */}
                 <div className="relative bg-white rounded-lg shadow-cozy-lg overflow-hidden w-80 sm:w-96 aspect-[3/4]">
-                  {/* TODO: Replace with actual book cover image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-weenie-teal/20 to-weenie-red/20 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <span className="text-7xl block mb-4" role="img" aria-hidden="true">🐕</span>
-                      <p className="font-display font-bold text-3xl text-weenie-red">Weenie</p>
-                      <p className="font-display font-bold text-xl text-weenie-yellow">in a</p>
-                      <p className="font-display font-bold text-3xl text-weenie-teal">Beanie</p>
-                    </div>
-                  </div>
+                  <Image
+                    src="/images/cover.png"
+                    alt="Weenie in a Beanie book cover"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
             </div>

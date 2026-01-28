@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Heart, BookOpen, ArrowRight } from 'lucide-react'
 import { Badge, Card, CardContent } from '@/components/ui'
@@ -40,13 +41,14 @@ export default function AboutPage() {
               <div className="relative">
                 {/* Photo frame */}
                 <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-softest overflow-hidden bg-white shadow-cozy-lg rotate-2 hover:rotate-0 transition-transform duration-300">
-                  {/* TODO: Replace with actual photo of Andre */}
-                  <div className="w-full h-full bg-gradient-to-br from-weenie-brown/30 to-weenie-orange/20 flex items-center justify-center">
-                    <div className="text-center">
-                      <span className="text-8xl block mb-4" role="img" aria-hidden="true">🐕</span>
-                      <p className="font-display font-bold text-weenie-brown text-2xl">Andre</p>
-                      <p className="text-weenie-brown/60">The Real Weenie</p>
-                    </div>
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/images/andre.jpg"
+                      alt="Andre, the real Weenie in a Beanie"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
                   </div>
                 </div>
                 {/* Heart decoration */}

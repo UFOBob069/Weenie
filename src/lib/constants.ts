@@ -7,7 +7,7 @@ export const SITE_DESCRIPTION = 'A cozy winter story kids love. Join Weenie the 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://weenieinabeanie.com'
 
 // Amazon book link
-export const AMAZON_BOOK_URL = 'https://www.amazon.com/dp/XXXXXXXXXX' // TODO: Update with actual ASIN
+export const AMAZON_BOOK_URL = 'https://www.amazon.com/dp/B0GK64YPMR'
 
 // Book details
 export const BOOK = {

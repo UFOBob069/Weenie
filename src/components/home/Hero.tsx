@@ -83,17 +83,15 @@ export function Hero() {
                 className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-weenie-brown/20 rounded-full blur-xl"
                 aria-hidden="true"
               />
-              {/* Book cover placeholder */}
+              {/* Book cover */}
               <div className="relative bg-white rounded-lg shadow-cozy-lg overflow-hidden aspect-[3/4]">
-                {/* TODO: Replace with actual book cover image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-weenie-teal/20 to-weenie-red/20 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <span className="text-6xl block mb-4" role="img" aria-hidden="true">🐕</span>
-                    <p className="font-display font-bold text-2xl text-weenie-red">Weenie</p>
-                    <p className="font-display font-bold text-lg text-weenie-yellow">in a</p>
-                    <p className="font-display font-bold text-2xl text-weenie-teal">Beanie</p>
-                  </div>
-                </div>
+                <Image
+                  src="/images/cover.png"
+                  alt="Weenie in a Beanie book cover"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
